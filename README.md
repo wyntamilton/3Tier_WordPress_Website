@@ -108,6 +108,8 @@ EFS:  <br/>
 
 ## 4️⃣ Compute Setup – EC2 Instances, PuTTY Access, and WordPress  
 I launched one EC2 instance in a public subnet and connected to it directly using PuTTY. This server was used to configure the system and perform installation steps. I also launched two additional EC2 instances in private subnets that served as the WordPress application servers. After connecting and configuring them, I installed Apache, PHP, WordPress, mounted EFS (optional), and updated the wp-config.php file with the RDS database details.
+
+<br />
 MYSQL: <br/>
 <img src="https://i.imgur.com/ku3j2ST.png" height="80%" width="80%" alt="IAM ROLE"/>
 <br />
@@ -117,6 +119,8 @@ PHP:  <br/>
 <br />
 ## 5️⃣ Application Load Balancer – Target Group & Listener  
 To expose the WordPress site, I created an Application Load Balancer in the public subnets. I then created a target group and registered both private EC2 application servers. After configuring the ALB listener on port 80 to forward traffic to the target group, the ALB successfully routed incoming traffic to the WordPress servers. This provided a secure and scalable entry point to the application.
-WordPress:  <br/>
+<br />
+<br />
+WordPress: <br />
 <img src="https://i.imgur.com/4a5INi2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
